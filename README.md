@@ -41,5 +41,8 @@
 │   └───validation - Application validation directory
 ├───pkg - Application package directory 
 │   └───config
-└───tmp - Air temp directory
+
 ````
+
+## Swagger auto generates
+![](../../../Pictures/Screenshots/Ekran Görüntüsü (7).png)
