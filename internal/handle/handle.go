@@ -20,4 +20,8 @@ func SetupHandle(echo *echo.Group) {
 		}{Client: connection, Context: contextBack, Model: model.User{}},
 	}
 	echo.POST("/users", userController.Store)
+	echo.GET("/users/:id", userController.Show)
+	echo.DELETE("/users/:id", userController.Destroy)
+	echo.PUT("/users/:id", userController.Update)
+
 }

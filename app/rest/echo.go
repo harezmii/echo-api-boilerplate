@@ -10,6 +10,8 @@ import (
 	"net/http"
 )
 
+const Version = "0.0.5"
+
 func SetupRest(address string) {
 	app := echo.New()
 
@@ -23,7 +25,10 @@ func SetupRest(address string) {
 	handle.SetupHandle(v1)
 	// HANDLE SETUP END
 
+	// SWAGGER
 	app.GET("/swagger/*", echoSwagger.WrapHandler)
+	// SWAGGER END
+
 	// Rest PING
 	app.GET("/ping", func(ctx echo.Context) error {
 		return ctx.String(http.StatusOK, ".")

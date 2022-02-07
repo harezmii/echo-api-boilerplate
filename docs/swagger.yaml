@@ -24,12 +24,12 @@ info:
     email: suatcnby06@gmail.com
     name: Api Support
     url: https://localhost/support
-  description: This is e-commerce server.
+  description: This is echo server.
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://localhost/api/v1/
-  title: Echo Template Apı
+  title: Echo Template Api
   version: "1.0"
 paths:
   /users:
@@ -53,6 +53,72 @@ paths:
               $ref: '#/definitions/model.User'
             type: array
       summary: Create Data
+      tags:
+      - Users
+  /users/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: get string by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: Delete Data
+      tags:
+      - Users
+    get:
+      consumes:
+      - application/json
+      description: get string by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: Show Data
+      tags:
+      - Users
+    put:
+      consumes:
+      - application/json
+      description: update users
+      parameters:
+      - description: User form
+        in: body
+        name: body
+        schema:
+          $ref: '#/definitions/model.User'
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: update Data
       tags:
       - Users
 swagger: "2.0"

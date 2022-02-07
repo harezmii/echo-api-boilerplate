@@ -4,9 +4,9 @@ import (
 	"api/app/rest"
 )
 
-// @title Echo Template Apı
+// @title Echo Template Api
 // @version 1.0
-// @description This is e-commerce server.
+// @description This is echo server.
 // @termsOfService https://localhost/api/v1/
 
 // @contact.name Api Support
