@@ -44,5 +44,5 @@
 
 ````
 
-## Swagger auto generates
-![](../../../Pictures/Screenshots/Ekran Görüntüsü (7).png)
+## Swagger generates
+![](https://user-images.githubusercontent.com/55887187/152854587-672fd01b-b16f-4705-b2a2-f175b283b5ce.png)
