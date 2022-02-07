@@ -7,5 +7,6 @@ import (
 
 func SetupMiddleware(echo *echo.Echo) {
 	echo.Use(middleware.Logger())
-	echo.Use(middleware.Recover())
+	//echo.Use(middleware.Recover())
+
 }

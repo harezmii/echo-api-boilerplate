@@ -1,0 +1,58 @@
+basePath: /api/v1
+definitions:
+  model.User:
+    properties:
+      email:
+        type: string
+      name:
+        maxLength: 30
+        minLength: 3
+        type: string
+      password:
+        type: string
+      status:
+        type: boolean
+    required:
+    - email
+    - name
+    - password
+    - status
+    type: object
+host: localhost:4000
+info:
+  contact:
+    email: suatcnby06@gmail.com
+    name: Api Support
+    url: https://localhost/support
+  description: This is e-commerce server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://localhost/api/v1/
+  title: Echo Template Apı
+  version: "1.0"
+paths:
+  /users:
+    post:
+      consumes:
+      - application/json
+      description: create users
+      parameters:
+      - description: User form
+        in: body
+        name: body
+        schema:
+          $ref: '#/definitions/model.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+      summary: Create Data
+      tags:
+      - Users
+swagger: "2.0"
